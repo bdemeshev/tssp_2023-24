@@ -1,0 +1,62 @@
+---
+title: "Poisson process"
+format:
+  html:
+    toc: true
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+bibliography: references.bib
+editor_options: 
+  chunk_output_type: console
+  markdown: 
+    wrap: 72
+---
+
+::: {.hidden}
+$$
+ \newcommand\cN{{\mathcal{N}}}
+ \let\P\relax
+ \newcommand\P{{\mathbb{P}}}
+ \newcommand\E{{\mathbb{E}}}
+ \newcommand\Var{{\mathrm{Var}}}
+ \newcommand\Cov{{\mathrm{Cov}}}
+ \newcommand\Corr{{\mathrm{Corr}}}
+$$
+:::
+
+:::{.callout-note}
+## Poisson process 
+
+Consider the random process $(X_t)$. The time $t$ is continuous, $t\in[0;\infty)$. 
+The random variable $X_t$ counts the number of "arrivals" on $[0;t]$.
+
+We assume that
+
+1. $X_0 = 0$. 
+
+2. "Stationary increments". The number of arrival during any time interval $[t;t+h]$ depends only on the length $h$ of the interval and not on starting time $t$. 
+
+3. "Independent increments".
+
+4. For small time interval length $h$ the probability of exactly one arrival is approximately proportional to $h$. 
+$$
+\P(X_{t+h} - X_t = 1) = \lambda h + o(h).
+$$
+5. For small time interval length $h$ the probability of two or more arrivals is negligible compared to $h$. 
+
+$$
+\P(X_{t+h} - X_t \geq 2) = o(h).
+$$
+:::
+
+Let's recap that $o(h)$ is any function of $h$ such that 
+$$
+\lim_{n\to\infty} \frac{o(h)}{h} = 0.
+$$
+
+
+
+From the last two assumtions we deduce that $\P(X_{t+h} - X_t \geq 2) = 1 - \lambda h + o(h)$.
+
