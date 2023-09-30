@@ -58,5 +58,7 @@ $$
 
 
 
-From the last two assumtions we deduce that $\P(X_{t+h} - X_t \geq 2) = 1 - \lambda h + o(h)$.
+From the last two assumptions we deduce that $\P(X_{t+h} - X_t \geq 2) = 1 - \lambda h + o(h)$.
+
+
 
