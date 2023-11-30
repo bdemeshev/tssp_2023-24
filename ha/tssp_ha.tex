@@ -184,6 +184,128 @@
     
 \end{enumerate}
 
+
+\newpage
+\section*{Home Assignment 2}
+Hereinafter $(W_t)$ is a standard Wiener process.  
+
+\begin{enumerate}
+
+  
+  \item Some questions about Wiener process!
+  \begin{enumerate}
+    \item Find $\E(W_7 \mid W_5)$, $\Var(W_7\mid W_5)$, $\E(W_7 W_6 \mid W_5)$.
+    \item Find $\E(W_5 \mid W_7)$, $\Var(W_5\mid W_7)$.
+  \end{enumerate}
+  
+  \item Let $(W_t)$ be a standard Wiener process and $Y_t = W_t^3 + t^2 W_t^2$.
+  \begin{enumerate}
+    \item Find $\E(Y_t)$ and $\Var(Y_t)$.
+    \item Is $Y_t$ a martingale?
+    \item Find $\E(Y_{t} \mid W_s)$ for $t \geq s$. 
+  \end{enumerate}
+
+
+  \item Consider two independent Wiener processes $A_t$ and $B_t$.
+  Check whether these processes are Wiener processes:
+  \begin{enumerate}
+    \item $X_t = (A_t + B_t) / 2$.
+    \item $Y_t = (A_t + B_t) / \sqrt{2}$.
+  \end{enumerate}
+
+  \item Using Ito's lemma find $dX$ and the corresponding full form.
+  \begin{enumerate}
+    \item $X_t = W_t^6 \cos t$.
+    \item $X_t = Y_t^3 + t^2 Y_t$ where $dY_t = W_t^2 dW_t + tW_t dt$.
+  \end{enumerate}
+
+  \item Consider $I_t = \int_0^t W_u^2 u^2 du$. 
+  Find $\E(I_t)$, $\Var(I_t)$ and $\Cov(I_t, W_t)$.
+
+  \item Let $X_t = 42 + t^2W_t^3 + tW_t^2 + \int_0^t 3W_u du + \int_0^t W_u^3 dW_u$.
+  \begin{enumerate}
+    \item Find $dX_t$.
+    \item Is $X_t$ a martingale? Is $Y_t = X_t - \E(X_t)$ a martingale? Provide a short argument for your answer. 
+  \end{enumerate}
+  
+  
+
+\end{enumerate}
+
+
+\newpage
+\section*{Home Assignment 3}
+\begin{enumerate}
+  
+  
+  \begin{minipage}{0.42\linewidth}
+    \includegraphics[width=7cm]{tree.jpg}  
+  \end{minipage}
+  %
+  \begin{minipage}{0.58\linewidth}
+    \item Consider two-period binomial tree model without dividents.
+    Initial stock price is $S_0 = 200$, 
+    in each period the stock price is multiplied by $u=1.15$ or by $d=0.75$. 
+    One period interest rate is $r=0.05$. 
+    
+    \begin{enumerate}
+    \item Find the risk-neutral probability. 
+    \item Price the following binary option: at time $T=2$ you get $100\$ $ if $S_1 > 200$ and nothing otherwise. 
+    \item Price the following chooser option: at $t=1$ the owner 
+    of the option decides whether the option is call or put. The strike price 
+    is $K=200$ and expiry date is $T=2$. 
+    \end{enumerate}
+    \end{minipage}
+  
+  
+  
+  \item In the framework of Black and Scholes model find the price at $t=0$ of the following two 
+  financial assets, $dS_t = \mu S_t dt + \sigma S_t dW_t$ is the share price equation. 
+  \begin{enumerate}
+    \item The asset pays you at time $T$ exactly one dollar if $S_T < K$ where $K$ is a constant 
+    specified in the contract. 
+    \item The asset pays you at time $T$ exactly $S_T^2$ dollars.
+  \end{enumerate}
+  
+  
+  
+  \item Consider the Vasicek interest rate model, 
+  \[
+    dR_t=5(0.06 - R_t) \, dt + 3 \, dW_t, \quad R_0 = 0.07.
+  \]
+  Here $R_t$ is the interest rate.
+  \begin{enumerate}
+  \item Using the substitution $Y_t=e^{at} R_t$ find the solution of the stochastic differential equation.
+  Start by finding $dY_t$. 
+  \item Find $\E(R_t)$ and $\Var(R_t)$.
+  \item Which value in this model would you call long-term equilibrium rate and why?
+  \end{enumerate}
+  
+  Hint: you may have integrals in you expression for $R_t$, but no $R_t$.
+  
+  \item Let $X_t$ be the exchange rate measured in roubles per dollar. 
+  We suppose that $dX_t = \mu X_t dt + \sigma X_t dW_t$. 
+  
+  Consider the inverse exchange rate $Y_t = 1/X_t$ measured in dollars per rouble. 
+  
+  Write the stochastic differential equation for $dY_t$. 
+  The equation may contain $Y_t$ and constants, but not $X_t$.
+  
+  \item Solve the stochatic differential equation
+\[
+dY_t = - Y_t dt + dW_t, \; Y_0 = 1
+\]
+
+If you are have no clues you may try a substitution $Z_t = f(t) Y_t$. 
+Do not forget that the final answer may contain integrals that can't be calculated explicitely. It's ok.
+
+
+
+
+  \end{enumerate}
+  
+
+
 \end{document}
 
 \begin{enumerate}
@@ -345,7 +467,6 @@ Deadline: \textbf{2022-12-06, 21:00}.
 \end{enumerate}
 
 Hint: only the binary answer for (b) is not sufficient but the argument is very-very short if you solve (a). 
-
 
 
 
