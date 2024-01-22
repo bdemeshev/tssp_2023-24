@@ -306,6 +306,88 @@ Do not forget that the final answer may contain integrals that can't be calculat
   
 
 
+\newpage
+\section*{Home Assignment 4}
+
+\begin{enumerate}
+  \item The process $(u_t)$ is a white noise with variance $\Var(u_t) = \sigma^2$. 
+  Consider the process $b_t = t^2 + 6t + (1-2L)^2 u_t$. %, $b_t = \frac{1}{1-0.3 L}u_t$, $c_t = \frac{1 - 0.3F}{1-0.3L}u_t$, $d_t = \frac{1 - 0.4F}{1-0.3L}u_t$.
+  
+  \begin{enumerate}
+    \item Write explicit expression for $(b_t)$ without lag operator $L$.
+    \item Find $\E(b_t)$ and $\Var(b_t)$.
+    \item Find $\Cov(b_t, b_{t-k})$ and $\Corr(b_t, b_{t-k})$.
+    \item Is the process $(b_t)$ weakly stationary?    
+  \end{enumerate}
+
+  \item Let $(u_t)$ be a white noise process with variance $\Var(u_t) = \sigma^2$ and 
+  \[
+  y_t = 1 + u_t + 0.7u_{t-1} + 0.7^2 u_{t-2} + 0.7^3 u_{t-4} + \ldots  
+  \]
+  \begin{enumerate}
+    \item Find $\E(y_t)$, $\Var(y_t)$.
+    \item Find $\Cov(y_t, y_{t-k})$.
+    \item Is $(y_t)$ weakly stationary?
+    \item Sketch the autocorrelation function of $(y_t)$ if it is weakly stationary.
+  \end{enumerate}
+
+
+  % \item The process $(y_t)$ is weakly stationary with $\gamma_k = \Cov(y_t, y_{t+k})$.
+  % Consider the process  $b_{t}=4y_{t} - 3 y_{t-1} + 18$.
+
+  % \begin{enumerate}
+  %   \item Find new covariances $\theta_k = \Cov(b_t, b_{t+k})$ in terms of old covariances $(\gamma_j)$.
+  %   \item Is $(b_t)$ weakly stationary?
+  % \end{enumerate}
+
+  \item Provide an example of two dependent processes $(a_t)$ and $(b_t)$ such that each of them is weakly stationary, 
+  but their sum is not weakly stationary. 
+
+
+  \item Consider three variables $(y_1, y_2, y_3)$ that are jointly normal
+  \[
+  y \sim \cN\left( \begin{pmatrix}
+    2 \\
+    6 \\
+    11 \\
+  \end{pmatrix}; \begin{pmatrix}
+    16 & 0 & -1 \\
+    0 & 4 & 1 \\
+    -1 & 1 & 4 \\
+  \end{pmatrix}  \right).  
+  \]
+
+  Find $\Corr(y_1, y_2)$ and $\pCorr(y_1, y_2 ; y_3)$.
+
+  \item Let $y_t = 5 + u_t + u_{t-1} + u_{t-2}$ where $(u_t)$ is a white noise with variance $\Var(u_t) = \sigma^2$.
+  \begin{enumerate}
+    \item Is the process $(y_t)$ weakly stationary?
+    \item Find the autocorrelation function $\rho_k$ for this process. 
+    \item Find the first two values of the partial autocorrelation function, $\phi_{11}$ and $\phi_{22}$.
+  \end{enumerate}
+
+  \item {[bonus]} Variables $u_1$ and $u_2$ are independent $\cN(0;1)$. 
+  Consider the process $y_t = u_1 \cos (\pi t /2) + u_2 \sin (\pi t /2)$.
+
+  \begin{enumerate}
+    \item Find $\E(y_t)$, $\Var(y_t)$, $\gamma_k = \Cov(y_t, y_{t+k})$. 
+    \item Is $(y_t)$ weakly stationary? 
+    \item Can $(y_t)$ be represented as $MA(\infty)$ process with respect to \textit{some} white noise, not necessary $(u_t)$?
+  \end{enumerate}
+
+  Your know additionally that $y_{100} = 0.2024$. 
+  \begin{enumerate}[resume]
+    \item What is your best point prediction for $y_{104}$? 
+    \item What is the shortest prediction interval that covers $y_{104}$ with at least 95\%-probability?
+  \end{enumerate}
+
+
+\end{enumerate}
+
+
+
+
+
 \end{document}
 
 \begin{enumerate}
