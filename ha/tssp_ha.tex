@@ -34,7 +34,7 @@
 \chead{}
 \rhead{HA}
 \lfoot{2023-2024}
-\cfoot{}
+\cfoot{Use of LLM is ok provided you mention it}
 \rfoot{\thepage/\pageref{LastPage}}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
@@ -384,9 +384,73 @@ Do not forget that the final answer may contain integrals that can't be calculat
 
 \end{enumerate}
 
+\newpage
+\section*{Home Assignment 5}
+
+\begin{enumerate}
 
 
+\item Consider the stationary $AR(1)$ process with equation $y_t = 5 + 0.3y_{t-1} + u_t$ where $(u_t)$ is a white noise.
+\begin{enumerate}
+  \item Find all values of the autocorrelation function $\rho_k$.
+  \item Find all values of the partial autocorrelation function $\phi_{kk}$.
+\end{enumerate}
 
+\item Consider the stationary $AR(2)$ process with equation $y_t = 5 + 0.3y_{t-1} - 0.02 y_{t-2} + u_t$ 
+where $(u_t)$ is a white noise. 
+\begin{enumerate}
+  \item Find the first two values of the autocorrelation function: $\rho_1$ and $\rho_2$.
+  \item Find all values of the partial autocorrelation function $\phi_{kk}$.
+\end{enumerate}
+
+\item Consider the stationary $ARMA(1, 1)$ process with equation $y_t = 1 + 0.5 y_{t-1} + u_t - 0.7 u_{t-1}$ where $(u_t)$ is a white noise. 
+\begin{enumerate}
+  \item Find $\mu$, $\delta_1$ and $\delta_2$ in the $MA(\infty)$ representation of the process
+  \[
+  y_t = \mu + u_t + \delta_1 u_{t-1} + \delta_2 u_{t-2} + \ldots  
+  \]
+  \item Assume that $\Var(u_t) = 9$, $u_{100} = -2$ and $y_{100} = 3$.
+  Find 95\% predictive interval for $y_{101}$ and $y_{102}$.
+\end{enumerate}
+
+\item The semi-annual $y_t$ is modelled by $ETS(AAA)$ process:
+    
+\[
+\begin{cases}
+    u_t \sim \cN(0; 4) \\
+    s_t = s_{t-2} + 0.1 u_t \\
+    b_t = b_{t-1} + 0.2 u_t \\
+    \ell_t = \ell_{t-1} + b_{t-1} + 0.3 u_t \\
+    y_t = \ell_{t-1} + b_{t-1} + s_{t-2} + u_t \\
+\end{cases}    
+\]
+
+Given that $s_{100} = 2$, $s_{99} = -1.9$, $b_{100} = 0.5$, $\ell_{100} = 4$ find 95\% predictive interval for $y_{102}$. 
+
+
+\item Consider the equations (A) $y_t = 4 + 0.6 y_{t-1} - 0.08y_{t-2} + u_t$, (B) $y_t = 4 + 0.6 y_{t-1} + 1.6y_{t-2} + u_t$
+and (C) $y_t = 4 + 0.6 y_{t-1} + 0.4 y_{t-2} + u_t$. 
+Assume that $(u_t)$ is a white noise. 
+  
+  \begin{enumerate}
+    \item How many non-stationary solutions does each equation have?
+    \item How many stationary solutions does each equation have?
+    \item How many stationary solutions that are $MA(\infty)$ with respect to $(u_t)$ does each equation have?
+  \end{enumerate}
+
+
+\item (bonus) Consider the process 
+\[
+y_t = \frac{1-0.5F}{1-0.5L} u_t,
+\]
+where $(u_t)$ is a white noise and $F$ is the forward operator, $F u_t = u_{t + 1}$.
+\begin{enumerate}
+  \item Write explicit expression for $(y_t)$ without lag nor forward operator.
+  \item Is $(y_t)$ a white noise?
+\end{enumerate}
+
+
+\end{enumerate}
 
 \end{document}
 
