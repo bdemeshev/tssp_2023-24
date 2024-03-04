@@ -1,0 +1,197 @@
+% arara: xelatex
+\documentclass[12pt]{article} % размер шрифта
+
+\usepackage{tikz} % картинки в tikz
+\usepackage{microtype} % свешивание пунктуации
+
+\usepackage{array} % для столбцов фиксированной ширины
+
+\usepackage{url} % для вставки ссылок \url{...}
+
+\usepackage{indentfirst} % отступ в первом параграфе
+
+\usepackage{sectsty} % для центрирования названий частей
+\allsectionsfont{\centering} % приказываем центрировать все sections
+
+\usepackage{amsthm} % теоремы и доказательства
+
+\theoremstyle{definition} % прямой шрифт в условии теорем
+\newtheorem{theorem}{Теорема}[section]
+
+
+\usepackage{amsmath, amssymb} % куча стандартных математических плюшек
+
+\usepackage[top=2cm, left=1.5cm, right=1.5cm, bottom=2cm]{geometry} % размер текста на странице
+
+\usepackage{lastpage} % чтобы узнать номер последней страницы
+
+\usepackage{enumitem} % дополнительные плюшки для списков
+%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
+\usepackage{caption} % подписи к картинкам без плавающего окружения figure
+
+
+\usepackage{fancyhdr} % весёлые колонтитулы
+\pagestyle{fancy}
+\lhead{Panda, Stochastic Processes}
+\chead{}
+\rhead{2023-12-22}
+\lfoot{}
+\cfoot{DO NOT PANIC}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+\usepackage{todonotes} % для вставки в документ заметок о том, что осталось сделать
+% \todo{Здесь надо коэффициенты исправить}
+% \missingfigure{Здесь будет картина Последний день Помпеи}
+% команда \listoftodos — печатает все поставленные \todo'шки
+
+\usepackage{booktabs} % красивые таблицы
+% заповеди из документации:
+% 1. Не используйте вертикальные линии
+% 2. Не используйте двойные линии
+% 3. Единицы измерения помещайте в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+\usepackage{fontspec} % поддержка разных шрифтов
+\usepackage{polyglossia} % поддержка разных языков
+
+\setmainlanguage{english}
+\setotherlanguages{russian}
+
+\setmainfont{Linux Libertine O} % выбираем шрифт
+% если Linux Libertine не установлен, то
+% можно также попробовать Helvetica, Arial, Cambria и т.Д.
+
+% чтобы использовать шрифт Linux Libertine на личном компе,
+% его надо предварительно скачать по ссылке
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+
+% на сервисах типа sharelatex.com этот шрифт есть :)
+
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+% пояснение зачем нужно шаманство с \newfontfamily
+% http://tex.stackexchange.com/questions/91507/
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+%\setlist[enumerate, 2]{label=\asbuk\cdot),ref=\asbuk\cdot} % списки уровня 2 будут буквами а) б) ...
+
+%% эконометрические и вероятностные сокращения
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\grad}{grad}
+\newcommand \cN{\mathcal{N}}
+\newcommand \RR{\mathbb{R}}
+\let\P\relax
+\DeclareMathOperator{\P}{\mathbb{P}}
+
+\newcommand \putyourname{\fbox{
+    \begin{minipage}{42em}
+      Name, group no:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+}
+
+
+
+
+\begin{document}
+
+
+\putyourname
+
+\begin{enumerate}
+    \item {[10 points]} Let $(X_t)$ be independent identically distributed random variables 
+    with $\P(X_i = -1) = 0.4$ and $\P(X_i = +1) = 0.6$. Consider the sum $S_t = X_1 + X_2 + \ldots + X_t$.
+ \begin{enumerate}
+    \item {[3]} Is $S_t$ a martingale?
+    \item {[7]} Find all constants $c$ such that $M_t = c^{S_t}$ is a martingale. 
+ \end{enumerate}
+
+\end{enumerate}
+
+ \newpage
+ \putyourname
+
+\begin{enumerate}[resume]
+\item {[10 points]} Let $a(t)$ be a deterministic function, $M_t = a(t) \cos (3W_t)$ and $(W_t)$ is a Wiener process.
+
+\begin{enumerate}
+    \item {[4]} Find $dM_t$. 
+    \item {[6]} Find a non-zero function $a(t)$ such that $(M_t)$ is a martingale.
+\end{enumerate}
+ 
+\end{enumerate}
+
+\newpage
+\putyourname
+
+\begin{enumerate}[resume]
+\item {[10 points]} You have two correlated Wiener processes, $(A_t)$ and $(B_t)$, with $\Corr(A_t - A_s, B_t - B_s) = \rho$ for all $t > s$.
+
+Split the time interval $[0;t]$ into $n$ small segments of equal length. 
+Let $\Delta^A_i$ be the increment of the Wiener process $(A_t)$ on the $i$-th small segment, i.e. $\Delta^A_i = A(it/n) - A((i-1)t/n)$.
+Let $\Delta^B_i$ be the increment of the Wiener process $(B_t)$ on the $i$-th small segment.
+
+Consider the sum of cross-products, $S_n = \sum_{i=1}^n \Delta^A_i \Delta^B_i$.
+\begin{enumerate}
+    \item {[3]} Find $\E(S_n)$.
+    \item {[4]} Does $\Var(S_n)$ tend to $0$ when $n \to \infty$?
+    \item {[2]} Find the mean square limit of $S_n$. 
+    \item {[1]} How would you write this limit in a short hand notation with $dA_t$ and $dB_t$?
+\end{enumerate}
+
+\end{enumerate}
+ 
+\newpage
+\putyourname
+
+\begin{enumerate}[resume]
+\item {[10 points]} The process $(X_t)$ has $X_0 = 2024$, $dX_t = W_t^2 dW_t + W_t dt$, where $(W_t)$ is a Wiener process.
+\begin{enumerate}
+    \item {[2]} Is $(X_t)$ a martingale?
+    \item {[4]} Find $d(X_t W_t)$.
+    \item {[4]} Find $\Cov(X_t, W_t)$.
+\end{enumerate}
+
+\end{enumerate}
+    
+ 
+\newpage
+\putyourname
+
+\begin{enumerate}[resume]
+\item {[10 points]} Consider two-period binomial model with initial share price $S_0 = 600$. 
+Up and down share price multipliers are $u=1.2$, $d=0.9$, risk-free interest rate is $r = 0.05$ per period. 
+
+The option pays you the maximal share price $X_2 = \max\{S_0, S_1, S_2\}$ at $t=2$.
+
+\begin{enumerate}
+    \item {[4]} Find the risk neutral probabilities. 
+    \item {[6]} Find the current price $X_0$ of this option. 
+%    \item How many shares should I have at $t=1$ in the «down» state of the world to replicate the option?
+\end{enumerate}
+\end{enumerate}
+ 
+\newpage
+\putyourname
+
+\begin{enumerate}[resume]
+\item {[10 points]}  Consider the framework of Black and Scholes model with riskless rate $r$, volatility $\sigma$ and initial share price $S_0$. 
+
+Find the current price $X_0$ of an option that pays you $X_T = 1$ at fixed time $T$ if $S_T \geq 2 S_0$.
+
+Hint: you may use the standard normal cumulative distribution function in your answer.
+
+
+\end{enumerate}
+
+
+
+\end{document}
