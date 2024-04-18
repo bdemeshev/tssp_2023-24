@@ -452,6 +452,73 @@ where $(u_t)$ is a white noise and $F$ is the forward operator, $F u_t = u_{t + 
 
 \end{enumerate}
 
+
+
+
+\newpage
+\rhead{Bonus HA}
+\section*{Bonus Home Assignment}
+
+\begin{enumerate}
+
+\item The variables $X_1$, \ldots, $X_n$ are independent identically distributed with $\E(X_i) = 3\alpha + 7$ and $\E(X_i^2) = \alpha^2 + 3\beta$.
+\begin{enumerate}
+  \item Find the method of moments estimator of $\alpha$ that uses the first moment. 
+  \item Find the method of moments estimator of $\alpha$ and $\beta$ that uses the first two non-central moments. 
+\end{enumerate}
+
+\item The variables $X_1$, \ldots, $X_n$ are independent identically distributed with density 
+\[
+f(x) = \begin{cases}
+  \lambda \exp(-\lambda (x - \theta)), \text{ if } x\geq \theta \\
+  0, \text{ otherwise}.
+\end{cases}  
+\]
+\begin{enumerate}
+  \item Find the maximum likelihood estimator of $\lambda$ for known value $\theta = 1$. 
+  \item Find the maximum likelihood estimator of $\theta$ for known value $\lambda = 1$. 
+\end{enumerate}
+
+\item The random variables $X_1$, \ldots, $X_n$ are independent identically distributed with 
+$\P(X_i = k) = (a - 1)^{k-1}/a^k$ for $k \in \{1, 2, \ldots \}$. 
+
+\begin{enumerate}
+  \item Find $\E(X_i)$.
+  \item Is $\hat a = \bar X$ an unbiased estimator for $a$?
+  \item Is $\hat a = \bar X$ a consistent estimator for $a$?
+\end{enumerate}
+
+\item The random variables $X_1$, \ldots, $X_n$ are independent identically distributed with 
+$\P(X_i = k) = (a - 1)^{k-1}/a^k$ for $k \in \{1, 2, \ldots \}$. 
+
+\begin{enumerate}
+  \item Find the Fisher information contained in $n$ observations. 
+  \item Does $\bar X$ attain the Cramer-Rao lower bound?
+  Hint: there is an easy solution that avoids calculation of $\E(\bar X)$ and $\Var(\bar X)$.
+  \item What is the Cramer-Rao lower bound for an estimator $\hat a'$ with $\E(\hat a') = 0.9 a + 0.20240425$?
+\end{enumerate}
+
+\item The random variables $X_1$, \ldots, $X_n$ are independent identically distributed with 
+$\P(X_i = k) = (a - 1)^{k-1}/a^k$ for $k \in \{1, 2, \ldots \}$. 
+
+Find two different sufficient statistics for $a$. 
+
+\item The variables $X_1$ and $X_2$ are independent and identically distributed. 
+You would like to test $H_0$: $X_i \sim U[0;1]$ against alternative $H_1$: the density function is given by $f(x) = 2x$ for $x \in [0;1]$. 
+
+\begin{enumerate}
+  \item Using Neyman-Pearson lemma design the most powerful test with $0.1$ significance level.
+  \item Do you reject $H_0$ for $x_1 = 0.7$ and $x_2 = 0.6$ with the test from point (a)?
+  \item What is the power of the test from point (a)?
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+
+
+
 \end{document}
 
 \begin{enumerate}
@@ -834,10 +901,6 @@ Deadline: \textbf{2023-02-19, 21:00}.
 \end{document}
 
 
-
-
-
-\end{document}
 
 
   
